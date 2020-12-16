@@ -4,9 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        table
+        {
+            border-collapse: collapse;
+            border: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
 </head>
 <body bgcolor="#FFFFDD">
-    <table style="width: 100%;" border="0" cellpadding="1" bgcolor = "#FFCC00">
+    <table style="width: 100%;" border="0" cellpadding="2" bgcolor = "#FFCC00">
         <thead>
             <tr>
                 <td style="text-align:center">Request For New PAN Card Or/And Changes Or Correction in PAN Data</td>
@@ -16,57 +24,48 @@
             </tr>
         </thead>
     </table>
-    <table style="width: 100%;" border="1" cellpadding="3">
+    <table style="width: 100%;" border="1" cellpadding="5">
         <tr>
             <td></td>
-            <td>* Whether citizen of India  Yes<input type="radio" value="Yes" >     No<input type="radio" value="No"></td>
-            <td></td>
+            <td colspan="2">* <b>Whether citizen of India</b>  <label for="citizen">Yes</label><input type="radio" value="Yes" name="citizen">     <label for="citizen">No</label><input type="radio" value="No" name="citizen"></td>
+            
         </tr>
         <tr>
             <td></td>
-            <td>*Permanent Aadhaar number  <input type="text" placeholder="Aadhaar number"></td>
-            <td></td>
+            <td colspan="2">* <b>Permanent Aadhaar number</b>  <input type="text" placeholder="Aadhaar number"></td>
+            
         </tr>
         <tr>
             <td><input type="checkbox"></td>
-            <td>* 1. Name</td>
-            <td></td>
+            <td colspan="2">* <b>1. Name</b></td>
         </tr>
         <tr>
             <td></td>
-            <td>Title      Shri/Mr <input type="radio"> Smt./Mrs<input type="radio">  Kumari/Ms<input type="radio"></td>
-            <td></td>
+            <td colspan="2"><b>Title</b>      <label for="title">Shri/Mr</label> <input type="radio" name="title"> <label for="title">Smt./Mrs</label><input type="radio" name="title">  <label for="title">Kumari/Ms</label><input type="radio" name="title"></td>
         </tr>
         <tr>
             <td></td>
-            <td>LastName <input type="text"> FirstName <input type="text"> MiddleName <input type="text"></td>
-            <td></td>
+            <td colspan="2">LastName <input type="text"> FirstName <input type="text"> MiddleName <input type="text"></td>
+
         </tr>
         <tr>
             <td></td>
-            <td> 	* Name as you would like it printed on the card (Prefix like Shri, Smt, Kumari, Late, Dr, CA, Ms, Mr, Mrs, M/s, Alias etc. are not allowed)</td>
-            <td></td>
+            <td colspan="2"> 	* <b>Name as you would like it printed on the card (Prefix like Shri, Smt, Kumari, Late, Dr, CA, Ms, Mr, Mrs, M/s, Alias etc. are not allowed)</b></td>
         </tr>
         <tr>
             <td></td>
-            <td>
+            <td colspan="2">
                 <input type="text">
             </td>
-            <td></td>
         </tr>
         <tr>
             <td></td>
             <td>Details of Parents. (Prefix like Shri, Smt, Kumari, Late, Dr, CA, Ms, Mr, Mrs, M/s, Alias etc. are not allowed.)</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>Details of Parents. (Prefix like Shri, Smt, Kumari, Late, Dr, CA, Ms, Mr, Mrs, M/s, Alias etc. are not allowed.)</td>
-            <td>Yes<input type="radio">   No <input type="radio"></td>
+            <td><label for="details">Yes</label><input type="radio" name="details">   <label for="details">No</label> <input type="radio"></td>
         </tr>
         <tr>
             <td><input type="checkbox"></td>
-            <td> 	*Father's Name(Mandatory field. Even married women should give father's name only.)</td>
+            <td> 	*<b>Father's Name(Mandatory field. Even married women should give father's name only.)</b></td>
             <td></td>
         </tr>
         <tr>
@@ -75,7 +74,7 @@
             <td></td>
         </tr>
         <tr>
-            <td><input type="radio"></td>
+            <td><input type="checkbox"></td>
             <td>Mother's Name(This field is optional.)</td>
             <td></td>
         </tr>
@@ -86,12 +85,12 @@
         </tr>
         <tr>
             <td></td>
-            <td>*4. Select Parent name which is to be printed on the card <br>(In case no option is provided then PAN card will be issued with father's name)</td>
-            <td>FatherName <input type="radio"> MotherName <input type="radio"></td>
+            <td>*<b>4. Select Parent name which is to be printed on the card <br>(In case no option is provided then PAN card will be issued with father's name)</b></td>
+            <td><label for="card">FatherName</label> <input type="radio" name="card"> <label for="card">MotherName</label> <input type="radio" name="card"></td>
         </tr>
         <tr>
             <td><input type="checkbox"></td>
-            <td> 	* 5. Date of Birth/Incorporation/Agreement/Partnership or Trust Deed/Formation of Body of Individuals/Association of Persons</td>
+            <td> 	* <b>5. Date of Birth/Incorporation/Agreement/Partnership or Trust Deed/Formation of Body of Individuals/Association of Persons</b></td>
             <td>DD <select name="DD" id="DD" value = "DD">
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -114,10 +113,10 @@
         <tr>
             <td><input type="checkbox"></td>
             <td>
-                * 6. Gender Male 
+                * <b>6. Gender</b> 
             </td>
             <td>
-                <input type="radio"> Female  <input type="radio">
+                <label for="gender">Male</label><input type="radio" name="gender"> <label for="gender">Female</label>  <input type="radio" name="gender">
             </td>
         </tr>
         <tr>
@@ -133,7 +132,7 @@
         <tr>
             <td><input type="checkbox"></td>
             <td>9. Address for Communication</td>
-            <td> 	Residential   <input type="radio">   Office <input type="radio"> </td>
+            <td> 	<label for="adress">Residential</label>   <input type="radio" name="address">   <label for="address">Office</label> <input type="radio" name="address"> </td>
         </tr>
         <tr>
             <td></td>
@@ -167,7 +166,7 @@
         </tr>
         <tr>
             <td></td>
-            <td> 	State/Union Territory</td>
+            <td> 	<label for="state">State/Union Territory</label></td>
             <td><select name="state" id="state" aria-placeholder="select providence">
                 <option value="tamilnadu"></option>
                 <option value="andhra pradesh"></option>
@@ -202,18 +201,18 @@
         </tr>
         <tr>
             <td></td>
-            <td>* 11. Telephone No.<br>(Country code is compulsory)</td>
+            <td>* <b>11. Telephone No.<br>(Country code is compulsory)</b></td>
             <td> <table border="1">
                 <tr>
-                    <td>Country code (ISD code) <select name="code" id="code">
+                    <td colspan="2">Country code (ISD code) <select name="code" id="code">
                         <option value="123">123</option>
                         <option value="456">456</option>
                         <option value="789">789</option>
                     </select></td>
                 </tr>
                 <tr>
-                    <td>Telephone No <input type="radio"></td>
-                    <td>Mobile No <input type="radio"></td>
+                    <td><label for="no">Telephone No</label> <input type="radio" name="no"></td>
+                    <td><label for="no">Mobile No</label> <input type="radio" name="no"></td>
                 </tr>
                 <tr>
                     <td>Area/STD Code <input type="text"></td>
@@ -230,17 +229,17 @@
         <tr>
             <td></td>
             <td> 	In case of a citizen of India, then </td>
-            <td><input type="radio"> AADHAAR  <input type="radio">  EID </td>
+            <td><input type="radio" name="s"> <label for="s">AADHAAR</label>  <input type="radio" name="s">  <label for="s">EID</label> </td>
         </tr>
         <tr>
             <td><input type="checkbox"></td>
-            <td>* 12. AADHAAR number : </td>
+            <td>* <b>12. AADHAAR number :</b> </td>
             <td><input type="number"><br> 	
                 In case AADHAAR number is provided, <br> then proof of AADHAAR along with supporting documents is to be submitted to NSDL</td>
         </tr>
         <tr>
             <td></td>
-            <td> 	* Name as per AADHAAR letter <br> as <br>per the enrollment ID of Aadhaar application form</td>
+            <td> 	* <b>Name as per AADHAAR letter <br> or <br> as per the enrollment ID of Aadhaar application form</b></td>
             <td><input type="text"></td>
         </tr>
         <tr>
@@ -250,7 +249,7 @@
         </tr>
         <tr>
             <td></td>
-            <td> 	14. Mention other Permanent Account Numbers (PANs) if any,inadvertently allotted to you. Submit proof of surrendered PAN(s) along with the application.</td>
+            <td colspan="2"> 	14. Mention other Permanent Account Numbers (PANs) if any,inadvertently allotted to you. Submit proof of surrendered PAN(s) along with the application.</td>
         </tr>
         <tr>
             <td></td>
@@ -264,7 +263,7 @@
         </tr>
         <tr>
             <td></td>
-            <td>15. Verification</td>
+            <td colspan="2">15. Verification</td>
         </tr>
         <tr>
             <table width = "100%" border="1" cellpadding = "3">
@@ -333,7 +332,7 @@
         </tr>
     </table>
    
-    For Paperless PAN Application: <input type="radio"> Yes <input type="radio"> No  
+    For Paperless PAN Application: <input type="radio" name="o"> <label for="o">Yes</label> <input type="radio" name="o"> <label for="o">No</label>  
     <table width = "100%" border="0">
         <tr>
             <td><input type="checkbox"> DSC <select name="dsc" id="dsc">
@@ -369,7 +368,10 @@
             <td>ALREADY UPLOADED DOCUMENTS:</td>
             <td><textarea name="text" id="text" cols="30" rows="10"></textarea></td>
         </tr>
+        <tr>
+            <td></td>
+            <td> <br><input type="submit" align = "centre" value="Submit"></td>
+        </tr>
     </table>
-    <input type="submit" align = "centre" value="Submit">
 </body>
 </html>
